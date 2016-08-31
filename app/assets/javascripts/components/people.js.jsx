@@ -9,12 +9,9 @@ class Application extends React.Component {
     super(props)
 
     this.state = { people: props.people }
-
-    // Bind our search function to "this"
-    this.search = this.search.bind(this)
   }
 
-  search() {
+  search(event) {
     let params = new URLSearchParams()
     params.append("q", event.target.value)
 
@@ -29,7 +26,9 @@ class Application extends React.Component {
   render() {
     return (<div>
       <ul className="list-group">
-        <li className="list-group-item searchbox"><input onChange={this.search} type="text" placeholder="Search..."/></li>
+        <li className="list-group-item searchbox">
+          <input onChange={this.search.bind(this)} type="text" placeholder="Search..."/>
+        </li>
         {this.state.people.map(person => <Person key={person.id} {...person}/>)}
       </ul>
 
