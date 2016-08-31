@@ -48,3 +48,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-generators', github: 'gstark/bootstrap-generators', branch: 'includes-simplified-controller-scaffold'
 gem 'bootstrap-social-rails'
 gem 'font-awesome-rails'
+gem 'react-rails'

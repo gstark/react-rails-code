@@ -6,8 +6,4 @@
   <h1>Listing people</h1>
 </div>
 
-<ul class="list-group">
-  <%- @people.each do |person| %>
-    <li class="list-group-item"><%= person.name %> from <%= person.city %> <%= person.state %></li>
-  <%- end %>
-</ul>
+<%= react_component("Application", people: @people) %>

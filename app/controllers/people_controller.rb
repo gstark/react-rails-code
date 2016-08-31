@@ -2,6 +2,9 @@ class PeopleController < ApplicationController
   # GET /people
   def index
     @people = Person.all
+    if params[:q]
+      @people = @people.where("name like ?", "%#{params[:q]}%")
+    end
   end
 
   # GET /people/1
