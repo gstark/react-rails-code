@@ -9,12 +9,14 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
+//= require 'components'
+//= require 'react_ujs'
 //
 //= require jquery
 //= require jquery_ujs
+Opal.load('components');
 //= require turbolinks
 //= require bootstrap
 //= require react
 //= require react_ujs
-//= require components
 //= require_tree .

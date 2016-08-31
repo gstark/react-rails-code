@@ -6,4 +6,4 @@
   <h1>Listing people</h1>
 </div>
 
-<%= react_component("Application", people: @people) %>
+<%= react_component("Application", people: @people.as_json) %>
